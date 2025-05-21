@@ -17,7 +17,7 @@ const SearchBar = () => {
     e.preventDefault();
 
     try {
-      const notes = await axios.get(process.env.BACKEND_URL, {
+      const notes = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/notes/getFiles`, {
         params: {
           title: searchQuery,
         },
@@ -36,8 +36,7 @@ const SearchBar = () => {
   }
 
   const showPDF = async (files) => {
-   window.open(`${import.meta.env.VITE_BACKEND_URL}/files/${files}`, "_blank", "noreferrer");
-
+    window.open(`${import.meta.env.VITE_BACKEND_URL}/files/${files}`, "_blank", "noreferrer");
   };
 
   return (

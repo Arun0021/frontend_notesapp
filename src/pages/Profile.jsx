@@ -13,7 +13,7 @@ const Profile = () => {
 
   useEffect(() => {
     const getUserFiles = async () => {
-      const result = await axios.get(`${process.env.BACKEND_URL}/${userId}`);
+      const result = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/${userId}`);
 
       console.log(result.data);
       setUserFiles(result.data.data);
@@ -63,7 +63,7 @@ const Profile = () => {
         <div className="grid grid-cols-1 gap-5 p-4 sm:grid-cols-2 md:grid-cols-3">
           {userFiles.map((file) => (
             <a
-              href={`http://localhost:6969/files/${file.files}`}
+              href={`${import.meta.env.VITE_BACKEND_URL}/files/${file.files}`}
               key={file._id}
               className="mb-3 flex h-[35px] max-w-[250px] items-center justify-between gap-10 rounded-xl border border-black px-4"
               target="_blank"

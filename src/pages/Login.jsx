@@ -23,7 +23,7 @@ const Login = () => {
         userPassword,
       };
 
-      const result = await axios.post(process.env.BACKEND_URL, user);
+      const result = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/auth/login`, user);
       if(result.data.status==="Error")
       {
         toast.error("wrong credentials ");
