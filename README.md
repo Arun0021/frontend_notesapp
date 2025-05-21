@@ -1,8 +1,36 @@
-# React + Vite
+# NotesApp - Full Stack Note Taking Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+NotesApp is a full-stack note-taking web application where users can register, log in, and manage their notes (create, read, update, delete). The frontend is built with React and the backend is powered by Node.js, Express, and MongoDB. This app demonstrates user authentication, RESTful API design, and seamless frontend-backend integration.
 
-Currently, two official plugins are available:
+## Features
+- **User Authentication**: Register and login with JWT authentication
+- **CRUD Operations**: Create, read, update, and delete notes
+- **Responsive Design**: Works on all device sizes
+- **File Uploads**: Support for image/file attachments via Cloudinary
+- **State Management**: Redux Toolkit for efficient state management
+- **Form Validation**: Client-side and server-side validation
+- **Error Handling**: Comprehensive error handling with user feedback
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+
+### Frontend
+- React 18
+- React Router DOM
+- Redux Toolkit
+- Axios for HTTP requests
+- React Toastify for notifications
+- Vite as build tool
+- Tailwind CSS for styling
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB with Mongoose ODM
+- JWT for authentication
+- bcrypt for password hashing
+- Multer & Cloudinary for file uploads
+- CORS for cross-origin requests
+
+### LIVE LINK
+https://frontend-notesapp-lyart.vercel.app/
